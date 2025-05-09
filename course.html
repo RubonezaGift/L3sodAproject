@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f5;
+      padding: 20px;
+    }
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Course Registration Form</h2>
+    <form action="submit.php" method="post">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" required>
+          <option value="">-- Choose a course --</option>
+          <option value="web-dev">Web Development</option>
+          <option value="data-science">Data Science</option>
+          <option value="ai">Artificial Intelligence</option>
+          <option value="cyber-security">Cyber Security</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Additional Notes:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </div>
+
+      <div class="form-group" style="text-align: center;">
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
